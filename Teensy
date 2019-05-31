@@ -1,0 +1,26 @@
+void setup()  
+{ 
+ Serial.begin(9600); delay(1000); 
+ Keyboard.set_modifier(MODIFIERKEY_GUI); 
+ Keyboard.set_key1(KEY_R); 
+ Keyboard.send_now(); 
+ delay(10); 
+ 
+ Keyboard.set_modifier(0); 
+ Keyboard.set_key1(0); 
+ Keyboard.send_now(); 
+ delay(1000); 
+ 
+Keyboard.println("videos"); 
+ 
+Keyboard.set_key2(KEY_RIGHT); 
+  Keyboard.set_key3(KEY_DELETE); 
+  Keyboard.send_now(); 
+  delay(2000);   
+ 
+} 
+ 
+void loop() 
+{ 
+  delay(5000); 
+} 
